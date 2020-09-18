@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import AddTasks from "./components/AddTasks";
+import Tasks from "./components/Tasks";
 
 function App() {
+  const [addNew, setAddNew] = useState(false);
+  const addNewHandler = () => setAddNew(!addNew);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="navbar">
+        <span style={{ color: "white", fontSize: "50px" }}>NjayTracker</span>
+        <div className="navmenu">
+          <button>All</button>
+          <button>Remaining</button>
+          <button>Completed</button>
+          {addNew ? (
+            <button onClick={addNewHandler}>Cancel</button>
+          ) : (
+            <button onClick={addNewHandler}>Add new</button>
+          )}
+        </div>
+      </div>
+      {addNew ? <AddTasks addNewHandler={() => addNewHandler()} /> : <Tasks />}
     </div>
   );
 }
