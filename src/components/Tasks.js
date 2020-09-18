@@ -11,6 +11,7 @@ export default function Tasks() {
   };
   useEffect(() => {
     getTasks();
+    return;
   });
   return (
     <div className="task-container">

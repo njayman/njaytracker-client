@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
 .app {
   display: flex;
   align-items: center;
@@ -36,7 +38,6 @@
   border-radius: 5px;
   box-shadow: 10px;
   min-width: 250px;
-  transition: transform ease-out 2s;
 }
 
 .add-task-form {
@@ -95,8 +96,54 @@ textarea {
   color: rgb(54, 54, 54);
 }
 
-.class-detail-button {
+.task h3::before {
+  font-family: "FontAwesome";
+  content: "\f274";
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.task-submit {
+  margin-top: 20px;
+  border: none;
+  background-color: #2e3244;
+  color: white;
+  border-radius: 5px;
+}
+
+.task-action-button {
   height: 35px;
+  width: 35px;
   border: none;
   outline: none;
+}
+
+.edit {
+  background-color: rgb(94, 236, 113);
+}
+
+.delete {
+  background-color: #f38383;
+}
+
+.edit::before {
+  font-family: "FontAwesome";
+  content: "\f040";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.delete::before {
+  font-family: "FontAwesome";
+  content: "\f1f8";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.detail::before {
+  font-family: "FontAwesome";
+  content: "\f06e";
+  display: inline-block;
+  vertical-align: middle;
 }

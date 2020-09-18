@@ -70,16 +70,7 @@ export default function AddTasks({ addNewHandler }) {
             />
           </React.Fragment>
         ) : null}
-        <input
-          type="submit"
-          style={{
-            marginTop: "20px",
-            border: "none",
-            backgroundColor: "#2e3244",
-            color: "white",
-            borderRadius: "5px",
-          }}
-        />
+        <input className="task-submit" type="submit" />
       </form>
     </div>
   );
